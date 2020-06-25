@@ -47,6 +47,122 @@
             отражающий текущее состояние процессора.</p>
         <p>В микропроцессорах Intel 8086 имеет название FLAGS и является 16-разрядным. Ярким примером флагов, входящих в состав регистра является флаг CF - флаг переноса.</p>
     </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 12</div>
+            <img src="{{ url_for('static', filename='5_2_1.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_2.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_3.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_4.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_5.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_6.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_7.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_8.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_9.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_10.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">11 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_11.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">12 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_12.jpg') }}"
+                 style="width:60%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">13 / 13</div>
+            <img src="{{ url_for('static', filename='5_2_13.jpg') }}"
+                 style="width:60%">
+        </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
 {% endblock %}
 
 
