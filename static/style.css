@@ -1,3 +1,7 @@
+body{
+    overflow-x:hidden;
+}
+
 .menu {
     list-style-type: none;
     margin: 0;
