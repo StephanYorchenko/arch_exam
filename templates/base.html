@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} билет</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+</head>
+<body>
+    <ul class="menu">
+        {% for i in names %}
+            {% if is_active_page(i, title) %}
+                <li><a class = "active" href="arch?task={{ i + 1 }}">{{ i + 1 }}.{{ task_name(i) }}</a></li>
+            {% else %}
+                <li><a href="arch?task={{ i + 1 }}">{{ i + 1 }}.{{ task_name(i) }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <div class="main">
+        <header>
+		    <h1>{{ task_name(title) }}</h1>
+	    </header>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
